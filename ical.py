@@ -27,7 +27,9 @@ class ICalendarWriter:
         cal.add("x-wr-timezone", "Asia/Tokyo")
 
         for event in self.events:
+            uid = f"connpass_{event['event_id']}@calendar.yamanashi.dev"
             e = Event()
+            e.add("uid", uid)
             e.add("summary", event["title"])
             e.add("description", event["event_url"])
             e.add("dtstart", self.__format_date(event["started_at"]))
