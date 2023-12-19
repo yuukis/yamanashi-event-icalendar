@@ -33,6 +33,7 @@ class ICalendarWriter:
             e.add("dtstart", self.__format_date(event["started_at"]))
             e.add("dtend", self.__format_date(event["ended_at"]))
             e.add("dtstamp", self.__format_date(event["updated_at"]))
+            e.add("last-modified", self.__format_date(event["updated_at"]))
             location_array = []
             if event["address"] is not None:
                 location_array.append(event["address"])
