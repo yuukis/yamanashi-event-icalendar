@@ -17,6 +17,7 @@ class ICalendarWriter:
 
     def __build(self):
         cal = Calendar()
+        cal.add("method", "PUBLISH")
         cal.add("version", "2.0")
         cal.add("prodid", "-//yuukis//yamanashi-icalendar-updater//JP")
         if self.name is not None:
