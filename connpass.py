@@ -50,13 +50,20 @@ class ConpassEventRequest:
             ym = ",".join(month_array)
             params["ym"] = ym
 
-        if self.count is not None:
-            params["count"] = self.count
-        if self.order is not None:
-            params["order"] = self.order.value
+        page_size = 100
+        params["count"] = page_size
+        params["order"] = 2
+        page = 0
+        events = []
+        while True:
+            params["start"] = page * page_size + 1
+            response = self.__get(params)
+            json = response.json()
+            events += json['events']
 
-        response = self.__get(params)
-        events = response.json()['events']
+            if json['results_returned'] < page_size:
+                break
+            page += 1
 
         if self.prefecture != "":
             events = list(filter(self.__is_in_pref, events))
