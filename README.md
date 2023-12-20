@@ -1,4 +1,10 @@
+[![Actions Status](https://github.com/yuukis/yamanashi-icalendar-updater/workflows/Release%20event.ics/badge.svg)](https://github.com/yuukis/yamanashi-icalendar-updater/actions)
+
 # yamanashi-icalendar-updater
+
+iCalendar generator for tech events in Yamanashi Prefecture.
+
+[日本語版 README は こちら](README-ja.md)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -45,8 +51,6 @@ https://calendar.yamanashi.dev/event.ics
 python main.py
 ```
 
-
-
 <!-- LICENSE -->
 ## License
 
@@ -56,7 +60,6 @@ Distributed under the Apache License, Version 2.0. See `LICENSE` for more inform
 ## Contact
 
 Yuuki Shimizu - [@yuuki_maxio](https://x.com/yuuki_maxio) 
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
