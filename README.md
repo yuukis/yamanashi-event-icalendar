@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/yuukis/yamanashi-icalendar-updater/workflows/Release%20event.ics/badge.svg)](https://github.com/yuukis/yamanashi-icalendar-updater/actions)
+
 # yamanashi-icalendar-updater
 
 <!-- ABOUT THE PROJECT -->
