@@ -1,5 +1,10 @@
+import os
+from dotenv import load_dotenv
 from connpass import ConpassEventRequest
 from ical import ICalendarWriter
+from github import GitHubUploader
+
+load_dotenv()
 
 # 山梨県で開催されたIT勉強会コミュニティ
 SERIES_IDS = [
@@ -33,6 +38,12 @@ def main(ics_file="event.ics"):
         name=calendar_name,
         description=calendar_description
     ).write(ics_file)
+
+    GitHubUploader(
+        token=os.getenv("GH_TOKEN"),
+        owner=os.getenv("GH_OWNER"),
+        repo=os.getenv("GH_REPO")
+    ).upload(ics_file)
 
 
 if __name__ == "__main__":
