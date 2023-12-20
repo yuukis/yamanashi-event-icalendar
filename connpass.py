@@ -71,4 +71,6 @@ class ConpassEventRequest:
         return response
 
     def __is_in_pref(self, event):
+        if event["address"] is None:
+            return False
         return event["address"].startswith(self.prefecture)
