@@ -40,9 +40,9 @@ def main(ics_file="event.ics"):
     ).write(ics_file)
 
     GitHubUploader(
-        token=os.getenv("GH_TOKEN"),
-        owner=os.getenv("GH_OWNER"),
-        repo=os.getenv("GH_REPO")
+        token=os.getenv("GITHUB_TOKEN"),
+        owner=os.getenv("GITHUB_OWNER"),
+        repo=os.getenv("GITHUB_REPO")
     ).upload(ics_file)
 
 

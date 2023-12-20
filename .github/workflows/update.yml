@@ -31,8 +31,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run main.py
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GH_OWNER: ${{ vars.GH_OWNER }}
-        GH_REPO: ${{ vars.GH_REPO }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_OWNER: ${{ vars.GH_OWNER }}
+        GITHUB_REPO: ${{ vars.GH_REPO }}
       run: |
         python main.py
