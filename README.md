@@ -49,8 +49,6 @@ https://calendar.yamanashi.dev/event.ics
 python main.py
 ```
 
-
-
 <!-- LICENSE -->
 ## License
 
@@ -60,7 +58,6 @@ Distributed under the Apache License, Version 2.0. See `LICENSE` for more inform
 ## Contact
 
 Yuuki Shimizu - [@yuuki_maxio](https://x.com/yuuki_maxio) 
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
