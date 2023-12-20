@@ -1,23 +1,12 @@
 import requests
 import datetime
 from dateutil.relativedelta import relativedelta
-from enum import Enum
-
-
-class ConpassEventOrder(Enum):
-    UPDATE = 1
-    START = 2
-    NEW = 3
 
 
 class ConpassEventRequest:
-    def __init__(self,
-                 prefecture="",
-                 keyword=None,
-                 series_ids=None,
-                 months=None,
-                 count=100,
-                 order=ConpassEventOrder.NEW):
+
+    def __init__(self, prefecture="", keyword=None, series_ids=None,
+                 months=None):
         self.url = "https://connpass.com/api/v1/event/"
         self.prefecture = prefecture
         if keyword is None:
@@ -29,8 +18,6 @@ class ConpassEventRequest:
         else:
             self.series_ids = series_ids
         self.months = months
-        self.count = count
-        self.order = order
 
     def get_events(self):
         params = {}
