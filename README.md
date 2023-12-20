@@ -4,6 +4,8 @@
 
 iCalendar generator for tech events in Yamanashi Prefecture.
 
+[日本語版 README は こちら](README-ja.md)
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
