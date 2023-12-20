@@ -2,6 +2,8 @@
 
 # yamanashi-icalendar-updater
 
+iCalendar generator for tech events in Yamanashi Prefecture.
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
