@@ -3,7 +3,7 @@ import datetime
 from dateutil.relativedelta import relativedelta
 
 
-class ConpassEventRequest:
+class ConnpassEventRequest:
 
     def __init__(self, prefecture="", keyword=None, series_ids=None,
                  months=None):

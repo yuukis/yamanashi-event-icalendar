@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from connpass import ConpassEventRequest
+from connpass import ConnpassEventRequest
 from ical import ICalendarWriter
 from github import GitHubUploader
 
@@ -26,8 +26,8 @@ def distinct_by_key(data: list[dict], key: str) -> list[dict]:
 
 
 def main(ics_file="event.ics"):
-    events1 = ConpassEventRequest(prefecture="山梨県", months=6).get_events()
-    events2 = ConpassEventRequest(series_ids=SERIES_IDS, months=6).get_events()
+    events1 = ConnpassEventRequest(prefecture="山梨県", months=6).get_events()
+    events2 = ConnpassEventRequest(series_ids=SERIES_IDS, months=6).get_events()
     events = distinct_by_key(events1 + events2, "event_id")
     events.sort(key=lambda x: x["started_at"])
 
