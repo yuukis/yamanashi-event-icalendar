@@ -1,6 +1,6 @@
 [![Actions Status](https://github.com/yuukis/yamanashi-icalendar-updater/workflows/Release%20event.ics/badge.svg)](https://github.com/yuukis/yamanashi-icalendar-updater/actions)
 
-# yamanashi-icalendar-updater
+# Yanamashi Tech Events iCalendar Generator
 
 iCalendar generator for tech events in Yamanashi Prefecture.
 
@@ -31,7 +31,7 @@ https://calendar.yamanashi.dev/event.ics
 1. Get a personal access token at [GitHub](https://github.com/settings/tokens)
 2. Clone the repo
     ```sh
-    git clone https://github.com/yuukis/yamanashi-icalendar-updater.git
+    git clone https://github.com/yuukis/yamanashi-event-icalendar.git
     ```
 3. Install dependencies
     ```sh
