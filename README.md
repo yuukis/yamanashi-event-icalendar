@@ -11,7 +11,7 @@ iCalendar generator for tech events in Yamanashi Prefecture.
 
 This is a simple script that generates a calendar of tech events in Yamanashi Prefecture in iCalendar format and uploads it to a public repository.
 
-This script obtains event data from [Connpass](https://conpass.com) via API and converts it to iCalendar format.
+This script obtains event data from [Yamanashi Developer Hub](https://hub.yamanashi.dev) via API and converts it to iCalendar format.
 
 The iCalendar file is available at the following URL
 
@@ -66,4 +66,3 @@ Yuuki Shimizu - [@yuuki_maxio](https://x.com/yuuki_maxio)
 
 * [shingen.py](https://shingenpy.connpass.com)
   - python user community in Yamanashi, Japan
-* [Connpass](https://connpass.com)

@@ -9,7 +9,7 @@
 
 山梨県で開催されているテック系イベントのカレンダーを iCalendar 形式で生成し、公開用リポジトリにアップロードするシンプルなスクリプトです。
 
-このスクリプトでは [Connpass](https://conpass.com) に掲載されているイベントデータを API で取得し、iCalendar 形式に変換しています。
+このスクリプトでは [Yamanashi Developer Hub](https://hub.yamanashi.dev) に掲載されているイベントデータを API で取得し、iCalendar 形式に変換しています。
 
 iCalendar ファイルは下記の URL から利用できます。
 
@@ -65,4 +65,3 @@ Apache License, Version 2.0
 
 * [shingen.py](https://shingenpy.connpass.com)
   - 山梨県の python ユーザーコミュニティ
-* [Connpass](https://connpass.com)

@@ -27,20 +27,20 @@ class ICalendarWriter:
         cal.add("x-wr-timezone", "Asia/Tokyo")
 
         for event in self.events:
-            uid = f"connpass_{event['event_id']}@calendar.yamanashi.dev"
+            uid = f"connpass_{event.event_id}@calendar.yamanashi.dev"
             e = Event()
             e.add("uid", uid)
-            e.add("summary", event["title"])
-            e.add("description", event["event_url"])
-            e.add("dtstart", self.__format_date(event["started_at"]))
-            e.add("dtend", self.__format_date(event["ended_at"]))
-            e.add("dtstamp", self.__format_date(event["updated_at"]))
-            e.add("last-modified", self.__format_date(event["updated_at"]))
+            e.add("summary", event.title)
+            e.add("description", event.event_url)
+            e.add("dtstart", self.__format_date(event.started_at))
+            e.add("dtend", self.__format_date(event.ended_at))
+            e.add("dtstamp", self.__format_date(event.updated_at))
+            e.add("last-modified", self.__format_date(event.updated_at))
             location_array = []
-            if event["address"] is not None:
-                location_array.append(event["address"])
-            if event["place"] is not None:
-                location_array.append(event["place"])
+            if event.address is not None:
+                location_array.append(event.address)
+            if event.place is not None:
+                location_array.append(event.place)
             location = " ".join(location_array)
             if location != "":
                 e.add("location", location)
