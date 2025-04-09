@@ -10,6 +10,7 @@ class Event:
     started_at: str
     ended_at: str
     updated_at: str
+    open_status: str
     place: Optional[str]
     address: Optional[str]
 
@@ -26,6 +27,7 @@ class Event:
                     started_at=item["started_at"],
                     ended_at=item["ended_at"],
                     updated_at=item["updated_at"],
+                    open_status=item["open_status"],
                     place=item["place"],
                     address=item["address"],
                 )
