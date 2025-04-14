@@ -27,6 +27,9 @@ class ICalendarWriter:
         cal.add("x-wr-timezone", "Asia/Tokyo")
 
         for event in self.events:
+            if event.open_status == "cancelled":
+                continue
+
             uid = f"connpass_{event.event_id}@calendar.yamanashi.dev"
             e = Event()
             e.add("uid", uid)
@@ -36,8 +39,6 @@ class ICalendarWriter:
             e.add("dtend", self.__format_date(event.ended_at))
             e.add("dtstamp", self.__format_date(event.updated_at))
             e.add("last-modified", self.__format_date(event.updated_at))
-            if event.open_status == "cancelled":
-                e.add("status", "CANCELLED")
             location_array = []
             if event.address is not None:
                 location_array.append(event.address)
