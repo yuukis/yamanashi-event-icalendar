@@ -30,9 +30,8 @@ class ICalendarWriter:
             if event.open_status == "cancelled":
                 continue
 
-            uid = f"connpass_{event.event_id}@calendar.yamanashi.dev"
             e = Event()
-            e.add("uid", uid)
+            e.add("uid", event.uid)
             e.add("summary", event.title)
             e.add("description", event.event_url)
             e.add("dtstart", self.__format_date(event.started_at))

@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Event:
-    event_id: int
+    uid: str
     title: str
     event_url: str
     started_at: str
@@ -21,7 +21,7 @@ class Event:
         for item in json:
             events.append(
                 Event(
-                    event_id=item["event_id"],
+                    uid=item["uid"],
                     title=item["title"],
                     event_url=item["event_url"],
                     started_at=item["started_at"],
