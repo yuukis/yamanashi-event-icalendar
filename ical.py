@@ -1,4 +1,4 @@
-import datetime
+from dateutil import parser
 from icalendar import Calendar, Event
 
 
@@ -51,4 +51,4 @@ class ICalendarWriter:
         self.calendar = cal
 
     def __format_date(self, date):
-        return datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%S+09:00")
+        return parser.isoparse(date)
