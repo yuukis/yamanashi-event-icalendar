@@ -5,7 +5,9 @@ on:
     branches: [ "main" ]
 
   schedule:
-    - cron: "11 3 * * *"
+    - cron: "11 17 * * *"
+
+  workflow_dispatch: 
 
 permissions:
   contents: read
